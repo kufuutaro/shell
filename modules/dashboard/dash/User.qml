@@ -150,7 +150,7 @@ Row {
                     const hours = Math.floor((up % 86400) / 3600);
                     const minutes = Math.floor((up % 3600) / 60);
 
-                    let str = qsTr("up ");
+                    let str = qsTr("");
                     if (days > 0)
                         str += `${days} day${days === 1 ? "" : "s"}`;
                     if (hours > 0)
