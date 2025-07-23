@@ -10,13 +10,13 @@ Item {
     anchors.bottom: parent.bottom
     implicitWidth: Config.dashboard.sizes.dateTimeWidth
 
-    StyledText {
+     StyledText {
         id: hours
 
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.top: parent.top
-        anchors.topMargin: (root.height - (hours.implicitHeight + sep.implicitHeight + sep.anchors.topMargin + mins.implicitHeight + mins.anchors.topMargin + date.implicitHeight + date.anchors.topMargin)) / 2
+        anchors.topMargin: (root.height - (hours.implicitHeight + sep.implicitHeight + sep.anchors.topMargin + mins.implicitHeight + mins.anchors.topMargin + yay.implicitHeight + yay.anchors.topMargin)) / 2
 
         horizontalAlignment: Text.AlignHCenter
         text: Time.format("hh")
@@ -48,14 +48,14 @@ Item {
         anchors.topMargin: -sep.font.pointSize * 0.5
 
         horizontalAlignment: Text.AlignHCenter
-        text: Time.format("mm\na")
+        text: Time.format("mm\nA")
         color: Colours.palette.m3secondary
         font.pointSize: Appearance.font.size.extraLarge
         font.weight: 500
     }
 
     StyledText {
-        id: date
+        id: yay
 
         anchors.left: parent.left
         anchors.right: parent.right
@@ -63,9 +63,9 @@ Item {
         anchors.topMargin: Appearance.spacing.normal
 
         horizontalAlignment: Text.AlignHCenter
-        text: Time.format("dddd,\n MMMM d")
+        text: "♥"
         color: Colours.palette.m3tertiary
-        font.pointSize: Appearance.font.size.normal
+        font.pointSize: Appearance.font.size.extraLarge
         font.weight: 500
     }
 }
