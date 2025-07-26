@@ -69,6 +69,9 @@ MouseArea {
     }
 
     onPositionChanged: event => {
+        if (popouts.isDetached)
+            return;
+
         const x = event.x;
         const y = event.y;
 
@@ -125,6 +128,15 @@ MouseArea {
         } else if (showDashboard) {
             // If hovering over dashboard area while in shortcut mode, transition to hover control
             dashboardShortcutActive = false;
+        }
+
+        // Show/hide dashboard on drag (for touchscreen devices)
+        if (pressed && inTopPanel(panels.dashboard, dragStart.x, dragStart.y) && withinPanelWidth(panels.dashboard, x, y)) {
+            const dragY = y - dragStart.y;
+            if (dragY > Config.dashboard.dragThreshold)
+                visibilities.dashboard = true;
+            else if (dragY < -Config.dashboard.dragThreshold)
+                visibilities.dashboard = false;
         }
 
         // Show utilities on hover
