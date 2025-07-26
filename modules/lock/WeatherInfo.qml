@@ -40,7 +40,7 @@ RowLayout {
             Layout.fillWidth: true
 
             animate: true
-            text: Config.services.useFahrenheit ? Weather.tempF : Weather.tempC
+            text: Weather.tempF
             color: Colours.palette.m3primary
             horizontalAlignment: Text.AlignHCenter
             font.pointSize: Appearance.font.size.extraLarge
