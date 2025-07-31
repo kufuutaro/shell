@@ -157,7 +157,7 @@ Row {
                         str += `${str ? ", " : ""}${hours} hour${hours === 1 ? "" : "s"}`;
                     if (minutes > 0 || !str)
                         str += `${str ? ", " : ""}${minutes} minute${minutes === 1 ? "" : "s"}`;
-                    uptime.text = qsTr("up %1").arg(str);
+                    uptime.text = qsTr("%1").arg(str);
                 }
             }
         }

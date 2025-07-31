@@ -33,9 +33,9 @@ Item {
         StyledText {
             Layout.topMargin: -(font.pointSize * 0.1)
             Layout.alignment: Qt.AlignHCenter
-            text: "•••"
+            text: "•  •"
             color: Colours.palette.m3primary
-            font.pointSize: Appearance.font.size.extraLarge * 0.9
+            font.pointSize: Appearance.font.size.extraLarge * 0.8
         }
 
         StyledText {
@@ -66,9 +66,9 @@ Item {
             Layout.topMargin: Appearance.spacing.normal
             Layout.fillWidth: true
             horizontalAlignment: Text.AlignHCenter
-            text: Time.format("ddd, d")
+            text: "♥"
             color: Colours.palette.m3tertiary
-            font.pointSize: Appearance.font.size.normal
+            font.pointSize: Appearance.font.size.large
             font.weight: 500
             elide: Text.ElideRight
         }
