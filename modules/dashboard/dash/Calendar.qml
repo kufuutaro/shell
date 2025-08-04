@@ -1,6 +1,6 @@
 pragma ComponentBehavior: Bound
 
-import qs.widgets
+import qs.components
 import qs.services
 import qs.config
 import QtQuick
@@ -70,7 +70,7 @@ Column {
                 implicitHeight: parent.implicitHeight
 
                 radius: Appearance.rounding.full
-                color: model.today ? Colours.palette.m3primary : "transparent"
+                color: day.model.today ? Colours.palette.m3primary : "transparent"
 
                 StyledText {
                     id: text
