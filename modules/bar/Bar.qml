@@ -63,7 +63,7 @@ Item {
     anchors.bottom: parent.bottom
     anchors.left: parent.left
 
-    implicitWidth: child.implicitWidth + Config.border.thickness * 2
+    implicitWidth: child.implicitWidth + Math.max(Appearance.padding.smaller, Config.border.thickness) * 2
 
     Item {
         id: child
@@ -90,7 +90,7 @@ Item {
             anchors.topMargin: Appearance.spacing.normal
 
             radius: Appearance.rounding.full
-            color: Colours.palette.m3surfaceContainer
+            color: Colours.tPalette.m3surfaceContainer
 
             implicitWidth: workspacesInner.implicitWidth + Appearance.padding.small * 2
             implicitHeight: workspacesInner.implicitHeight + Appearance.padding.small * 2
@@ -152,7 +152,7 @@ Item {
             anchors.bottomMargin: Appearance.spacing.normal
 
             radius: Appearance.rounding.full
-            color: Colours.palette.m3surfaceContainer
+            color: Colours.tPalette.m3surfaceContainer
 
             implicitHeight: statusIconsInner.implicitHeight + Appearance.padding.normal * 2
 
