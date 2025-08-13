@@ -194,10 +194,51 @@ All configuration options are in `~/.config/caelestia/shell.json`.
         }
     },
     "background": {
+        "desktopClock": {
+            "enabled": false
+        },
         "enabled": true
     },
     "bar": {
         "dragThreshold": 20,
+        "entries": [
+        	{
+   	            "id": "logo",
+   	            "enabled": true
+   	        },
+   	        {
+   	            "id": "workspaces",
+   	            "enabled": true
+   	        },
+   	        {
+   	            "id": "spacer",
+   	            "enabled": true
+   	        },
+   	        {
+   	            "id": "activeWindow",
+   	            "enabled": true
+   	        },
+   	        {
+   	            "id": "spacer",
+   	            "enabled": true
+   	        },
+   	        {
+   	            "id": "tray",
+   	            "enabled": true
+   	        },
+   	        {
+   	            "id": "clock",
+   	            "enabled": true
+   	        },
+   	        {
+   	            "id": "statusIcons",
+   	            "enabled": true
+   	        },
+   	        {
+   	            "id": "power",
+   	            "enabled": true
+   	        }
+        ],
         "persistent": true,
         "showOnHover": true,
         "status": {
@@ -214,6 +255,7 @@ All configuration options are in `~/.config/caelestia/shell.json`.
             "label": "  ",
             "occupiedBg": false,
             "occupiedLabel": "󰮯 ",
+            "perMonitorWorkspaces": true,
             "rounded": true,
             "showWindows": true,
             "shown": 5
@@ -246,7 +288,7 @@ All configuration options are in `~/.config/caelestia/shell.json`.
         }
     },
     "lock": {
-        "maxNotifs": 5
+        "recolourLogo": false
     },
     "notifs": {
         "actionOnClick": false,
@@ -267,7 +309,8 @@ All configuration options are in `~/.config/caelestia/shell.json`.
         "audioIncrement": 0.1,
         "weatherLocation": "10,10",
         "useFahrenheit": false,
-        "useTwelveHourClock": false
+        "useTwelveHourClock": false,
+        "smartScheme": true
     },
     "session": {
         "dragThreshold": 30,
