@@ -9,7 +9,7 @@ import QtQuick.Layouts
 Item {
     id: root
 
-    readonly property list<string> timeComponents: Time.format(Config.services.useTwelveHourClock ? "hh:mm:A" : "hh:mm").split(":")
+    readonly property list<string> timeComponents: Time.format(Config.services.useTwelveHourClock ? "hh:mm:ss:A" : "hh:mm").split(":")
 
     anchors.top: parent.top
     anchors.bottom: parent.bottom
@@ -22,7 +22,7 @@ Item {
         spacing: 0
 
         StyledText {
-            Layout.bottomMargin: -(font.pointSize * 0.4)
+            Layout.bottomMargin: -(font.pointSize * 0.2)
             Layout.alignment: Qt.AlignHCenter
             text: root.timeComponents[0]
             color: Colours.palette.m3secondary
@@ -36,7 +36,7 @@ Item {
             Layout.alignment: Qt.AlignHCenter
             text: "•  •"
             color: Colours.palette.m3primary
-            font.pointSize: Appearance.font.size.extraLarge * 0.9
+            font.pointSize: Appearance.font.size.extraLarge * 0.7
             font.family: Appearance.font.family.clock
         }
 
@@ -50,6 +50,17 @@ Item {
             font.weight: 600
         }
 
+        StyledText {
+            Layout.topMargin: -(font.pointSize * 0.0)
+            Layout.bottomMargin: (font.pointSize * 0.5)
+            Layout.alignment: Qt.AlignHCenter
+            text: root.timeComponents[2]
+            color: Colours.palette.m3secondary
+            font.pointSize: Appearance.font.size.large
+            font.family: Appearance.font.family.clock
+            font.weight: 600
+        }
+
         Loader {
             Layout.alignment: Qt.AlignHCenter
 
@@ -58,7 +69,7 @@ Item {
             visible: active
 
             sourceComponent: StyledText {
-                text: root.timeComponents[2] ?? ""
+                text: root.timeComponents[3] ?? ""
                 color: Colours.palette.m3secondary
                 font.pointSize: Appearance.font.size.large
                 font.family: Appearance.font.family.clock
