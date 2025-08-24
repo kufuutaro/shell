@@ -309,10 +309,10 @@ ColumnLayout {
 
             loops: 2
 
-            MessageAnim {
+            FlashAnim {
                 to: 0.3
             }
-            MessageAnim {
+            FlashAnim {
                 to: 1
             }
         }
@@ -335,16 +335,10 @@ ColumnLayout {
         }
     }
 
-    component MessageAnim: NumberAnimation {
+    component FlashAnim: NumberAnimation {
         target: message
         property: "opacity"
         duration: Appearance.anim.durations.small
         easing.type: Easing.Linear
-    }
-
-    component Anim: NumberAnimation {
-        duration: Appearance.anim.durations.normal
-        easing.type: Easing.BezierSpline
-        easing.bezierCurve: Appearance.anim.curves.standard
     }
 }
