@@ -7,10 +7,11 @@ JsonObject {
     property bool useTwelveHourClock: Qt.locale().timeFormat(Locale.ShortFormat).toLowerCase().includes("a")
     property real audioIncrement: 0.1
     property bool smartScheme: true
-    property string defaultPlayer: "Spotify"
+    property string defaultPlayer: "Feishin"
     property list<var> playerAliases: [
         {
-            "com.github.th_ch.youtube_music": "YT Music"
+            "com.github.th_ch.youtube_music": "YT Music",
+            "io.github.htkhiem.Euphonica": "Euphonica"
         }
     ]
 }
