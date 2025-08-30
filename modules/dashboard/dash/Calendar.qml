@@ -14,6 +14,21 @@ Column {
     padding: Appearance.padding.large
     spacing: Appearance.spacing.small
 
+       StyledText {
+        id: month
+
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.top: mins.bottom
+        anchors.topMargin: Appearance.spacing.normal
+
+        horizontalAlignment: Text.AlignHCenter
+        text: Time.format("dddd, MMMM d yyyy")
+        color: Colours.palette.m3tertiary
+        font.pointSize: Appearance.font.size.normal
+        font.weight: 500
+    }
+
     DayOfWeekRow {
         id: days
 
