@@ -9,11 +9,15 @@ JsonObject {
     property int visualiserBars: 45
     property real audioIncrement: 0.1
     property bool smartScheme: true
-    property string defaultPlayer: "Spotify"
+    property string defaultPlayer: "Feishin"
     property list<var> playerAliases: [
         {
             "from": "com.github.th_ch.youtube_music",
             "to": "YT Music"
+        },
+        {
+            "from": "io.github.htkhiem.Euphonica",
+            "to": "Euphonica"
         }
     ]
 }
