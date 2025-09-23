@@ -567,7 +567,17 @@ default, you must create it manually.
     },
     "utilities": {
         "enabled": true,
-        "maxToasts": 4
+        "maxToasts": 4,
+        "toasts": {
+            "audioInputChanged": true,
+            "audioOutputChanged": true,
+            "capsLockChanged": true,
+            "chargingChanged": true,
+            "configLoaded": true,
+            "dndChanged": true,
+            "gameModeChanged": true,
+            "numLockChanged": true
+        }
     }
 }
 ```
