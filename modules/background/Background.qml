@@ -43,6 +43,14 @@ Loader {
 
             Loader {
                 anchors.right: parent.right
+                anchors.bottom: parent.top
+                anchors.rightMargin: Appearance.padding.large + 40
+
+                source: "Player.qml"
+            }
+
+            Loader {
+                anchors.right: parent.right
                 anchors.bottom: parent.bottom
                 anchors.margins: Appearance.padding.large
 
