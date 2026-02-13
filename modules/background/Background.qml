@@ -46,6 +46,14 @@ Loader {
                 }
             }
 
+              Loader {
+                anchors.right: parent.right
+                anchors.bottom: parent.top
+                anchors.rightMargin: Appearance.padding.large + 40
+
+                source: "Player.qml"
+            }
+
             Loader {
                 id: clockLoader
                 active: Config.background.desktopClock.enabled
