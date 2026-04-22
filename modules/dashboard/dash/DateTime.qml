@@ -57,7 +57,7 @@ Item {
             font.weight: 600
         }
 
-        }
+        
 
         StyledText {
             Layout.topMargin: -(font.pointSize * 0.0)
@@ -87,4 +87,5 @@ Item {
             }
         }
     
+    }
 }
