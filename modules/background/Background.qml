@@ -4,6 +4,7 @@ import QtQuick
 import Quickshell
 import Quickshell.Wayland
 import Caelestia.Config
+import qs.components
 import qs.components.containers
 import qs.services
 
@@ -153,10 +154,7 @@ Variants {
             ]
 
             transitions: Transition {
-                AnchorAnimation {
-                    duration: Tokens.anim.durations.expressiveDefaultSpatial
-                    easing: Tokens.anim.expressiveDefaultSpatial
-                }
+                AnchorAnim {}
             }
 
             sourceComponent: DesktopClock {
