@@ -30,7 +30,7 @@ Item {
 
         StyledText {
             Layout.alignment: Qt.AlignHCenter
-            text: "•••"
+            text: "• •"
             color: Colours.palette.m3primary
             font: Tokens.font.clock.size(28 * 0.9).build()
         }
@@ -51,13 +51,13 @@ Item {
             visible: active
 
             sourceComponent: StyledText {
-                text: "•••"
+                text: "• •"
                 color: Colours.palette.m3primary
                 font: Tokens.font.clock.size(28 * 0.9).build()
             }
         }
         Loader {
-            Layout.topMargin: -(((item as StyledText)?.font.pointSize ?? 0) * 0.4)
+            Layout.topMargin: -(((item as StyledText)?.font.pointSize ?? 0) * 0.2)
             Layout.alignment: Qt.AlignHCenter
             asynchronous: true
             active: Config.dashboard.showClockSeconds
@@ -68,6 +68,30 @@ Item {
                 color: Colours.palette.m3secondary
                 font: Tokens.font.clock.size(28).weight(Font.DemiBold).build()
             }
+        }
+
+         StyledText {
+            Layout.topMargin: -(font.pointSize * 0.0)
+            Layout.alignment: Qt.AlignHCenter
+            text: Time.secondStr
+            color: Colours.palette.m3secondary
+            font.pointSize: Appearance.font.size.large
+            font.family: Appearance.font.family.clock
+            font.weight: 600
+        }
+
+
+
+        StyledText {
+            Layout.topMargin: -(font.pointSize * 0.0)
+            Layout.bottomMargin: (font.pointSize * 0.5)
+            Layout.alignment: Qt.AlignHCenter
+            text: "♥"
+            color: Colours.palette.m3tertiary
+            font.pointSize: Appearance.font.size.large
+            font.family: Appearance.font.family.clock
+            font.weight: 500
+
         }
 
         Loader {
